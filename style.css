@@ -1,0 +1,57 @@
+html { 
+	font-size: 62.5%;
+	font-family: 'Arvo', serif;
+} 
+
+body { 
+	font-size: 1.8rem; /* =18px */
+} 
+
+h1 { 
+	font-size: 3.0rem; /* =30px */
+	text-align: center;
+} 
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+#sections a {
+	border-right: 1px solid black;
+	display: inline-block;
+	padding: 2rem;
+}
+
+#sections a:hover {
+	background-color: #98D2EB;
+	color: white;
+}
+
+.selected {
+	background-color: #F1DEDE;
+}
+
+ul {
+	text-align: center;
+}
+
+li { 
+	display: inline-block;
+	font-size: 2rem;
+	text-align: center;
+} 
+
+#last {
+	border: none !important;
+}
+
+#menubar {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#content {
+	margin-left: auto;
+  	margin-right: auto;
+}
