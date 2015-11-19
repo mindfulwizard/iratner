@@ -10,25 +10,11 @@
 		<div id="menubar">
 			<h1><a href="https://en.wikipedia.org/wiki/I,_Robot" target="_blank">I, Ratner</a></h1>
 			<ul id="sections">
-				<li ng-class="{active: isSet(1)}"><a href="#/" ng-click="setTab(1)">Home</a></li><li ng-class="{active: isSet(2)}"><a href="#about">About</a></li><li ng-class="{active: isSet(3)}"><a href="#articles" ng-click="setTab(3)">Articles</a></li><li ng-class="{active: isSet(4)}"><a href="#projects" ng-click="setTab(4)" id="last">Projects</a></li>
+				<li ng-class="{active: isSet(1)}"><a href="#/" ng-click="setTab(1)">Home</a></li><li ng-class="{active: isSet(2)}"><a href="#about" ng-click="setTab(2)">About</a></li><li ng-class="{active: isSet(3)}"><a href="#articles" ng-click="setTab(3)">Articles</a></li><li ng-class="{active: isSet(4)}"><a href="#projects" ng-click="setTab(4)" id="last">Projects</a></li>
 			</ul>
 		</div>
 		<div id="content">
 			<div ng-view></div>
-<!-- 			<div ng-show="isSet(1)">	
-			<div id="homepage">
-				<p>This is the personal website of Isaac Ratner, a web developer specializing in fullstack JavaScript. I'm currently looking for employment in NYC, so please feel to <a href="mailto:isaacratner@gmail.com" target="_blank">email me</a>. Don't forget to check out my <a href="https://github.com/mindfulwizard" target="_blank">GitHub page</a>!</p>
-			</div>
-			</div>
-			<div ng-show="isSet(2)">
-				<p>My Life Story</p>
-			</div>	
-			<div ng-show="isSet(3)">
-				<p>The Unblog</p>
-			</div>
-			<div ng-show="isSet(4)">
-				<p>Coming soon! In the meantime, please take a look at my <a href="https://github.com/mindfulwizard">GitHub page</a>.</p>
-			</div>	 -->
 		</div>
 		<script src="https://code.angularjs.org/1.4.7/angular.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular-route.min.js"></script>

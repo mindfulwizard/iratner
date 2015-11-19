@@ -3,26 +3,27 @@ var app = angular.module('iratner', ['ngRoute']);
 app.config(function($routeProvider) {
 	$routeProvider
         .when('/', {
-            templateUrl : 'pages/home.html',
-            controller  : 'MainCtrl'
+            templateUrl: 'pages/home.html',
+            controller: 'MainCtrl'
         })
         .when('/about', {
-            templateUrl : 'pages/about.html',
-            //controller  : 'aboutController'
+            templateUrl: 'pages/about.html'
         })
         .when('/articles', {
-            templateUrl : 'pages/articles.html',
-            //controller  : 'articlesController'
+            templateUrl: 'pages/articles.html'
         })
         .when('/projects', {
-            templateUrl : 'pages/projects.html',
-            //controller  : 'projectsController'
+            templateUrl: 'pages/projects.html'
+        })
+        .otherwise({
+            templateUrl: 'pages/home.html'
         });
     });
 
 app.controller('MainCtrl', function ($scope) {
 
     $scope.tab = 1;
+    //http://stackoverflow.com/questions/16384134/how-to-call-a-function-in-angularjs-when-route-matches
 
     $scope.setTab = function(newTab){
       $scope.tab = newTab;
@@ -33,17 +34,3 @@ app.controller('MainCtrl', function ($scope) {
 	};
 
 });
-
-// app.controller('mainCtrl', function($scope) {
-//     $scope.message = 'Everyone come and see how good I look!';
-// });
-
-// app.controller('aboutController', function($scope) {
-//     $scope.message = 'Look! I am an about page.';
-// });
-
-// app.controller('contactController', function($scope) {
-//     $scope.message = 'Contact us! JK. This is just a demo.';
-// });
-
-
