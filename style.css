@@ -28,11 +28,11 @@ a {
 	color: white;
 }
 
-.selected {
+.active {
 	background-color: #F1DEDE;
 }
 
-ul {
+ul,p {
 	text-align: center;
 }
 
@@ -54,4 +54,12 @@ li {
 #content {
 	margin-left: auto;
   	margin-right: auto;
+}
+
+/*#homepage {
+	font-size: 1.6rem;
+}*/
+
+p a {
+	text-decoration: underline;
 }
