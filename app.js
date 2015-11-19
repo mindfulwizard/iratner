@@ -1,22 +1,20 @@
 var app = angular.module('iratner', ['ngRoute']);
 
-app.config(function($routeProvider) {
+app.config(function($routeProvider, $locationProvider) {
+    $locationProvider.html5Mode(true);
 	$routeProvider
         .when('/', {
-            templateUrl : 'pages/home.html',
-            controller  : 'MainCtrl'
+            templateUrl: 'pages/home.html',
+            controller: 'MainCtrl'
         })
         .when('/about', {
-            templateUrl : 'pages/about.html',
-            //controller  : 'aboutController'
+            templateUrl: 'pages/about.html'
         })
         .when('/articles', {
-            templateUrl : 'pages/articles.html',
-            //controller  : 'articlesController'
+            templateUrl: 'pages/articles.html'
         })
         .when('/projects', {
-            templateUrl : 'pages/projects.html',
-            //controller  : 'projectsController'
+            templateUrl: 'pages/projects.html'
         });
     });
 
@@ -33,17 +31,3 @@ app.controller('MainCtrl', function ($scope) {
 	};
 
 });
-
-// app.controller('mainCtrl', function($scope) {
-//     $scope.message = 'Everyone come and see how good I look!';
-// });
-
-// app.controller('aboutController', function($scope) {
-//     $scope.message = 'Look! I am an about page.';
-// });
-
-// app.controller('contactController', function($scope) {
-//     $scope.message = 'Contact us! JK. This is just a demo.';
-// });
-
-
