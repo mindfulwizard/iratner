@@ -20,10 +20,19 @@ app.config(function($routeProvider) {
         });
     });
 
-app.controller('MainCtrl', function ($scope) {
-
-    $scope.tab = 1;
-    //http://stackoverflow.com/questions/16384134/how-to-call-a-function-in-angularjs-when-route-matches
+app.controller('MainCtrl', function ($scope, $location) {
+    if($location.$$url === '/' || !$location.$$url) {
+        $scope.tab = 1
+    }
+    if($location.$$url === '/about') {
+        $scope.tab = 2;
+    }
+    if($location.$$url === '/articles') {
+        $scope.tab = 3;
+    }
+    if($location.$$url === '/projects') {
+        $scope.tab = 4;
+    }
 
     $scope.setTab = function(newTab){
       $scope.tab = newTab;
