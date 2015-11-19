@@ -11,14 +11,15 @@
 		<div id="menubar">
 			<h1><a href="https://en.wikipedia.org/wiki/I,_Robot" target="_blank">I, Ratner</a></h1>
 			<ul id="sections">
-				<li ng-class="{active: isSet(1)}"><a href="/" ng-click="setTab(1)">Home</a></li><li ng-class="{active: isSet(2)}"><a href="/about" ng-click="setTab(2)">About</a></li><li ng-class="{active: isSet(3)}"><a href="/articles" ng-click="setTab(3)">Articles</a></li><li ng-class="{active: isSet(4)}"><a href="/projects" ng-click="setTab(4)" id="last">Projects</a></li>
+				<li ng-class="{active: isSet(1)}"><a href="/" ng-click="setTab(1)">Home</a></li><li ng-class="{active: isSet(2)}"><a href="/about.html" ng-click="setTab(2)">About</a></li><li ng-class="{active: isSet(3)}"><a href="/articles.html" ng-click="setTab(3)">Articles</a></li><li ng-class="{active: isSet(4)}"><a href="/projects.html" ng-click="setTab(4)" id="last">Projects</a></li>
 			</ul>
 		</div>
 		<div id="content">
 			<div ng-view></div>
 		</div>
-		<script src="https://code.angularjs.org/1.4.7/angular.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-route.min.js"></script>
+		<script src="https://code.angularjs.org/1.4.7/angular.js"></script>
+		<script src="https://code.angularjs.org/1.4.7/angular-route.js"></script>
+		<script src="https://code.angularjs.org/1.4.7/angular-mocks.js"></script>
 		<script src="/app.js"></script>
 	</body>
 </html>	
