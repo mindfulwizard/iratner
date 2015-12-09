@@ -34,6 +34,8 @@ a {
 
 ul,p {
 	text-align: center;
+	padding: 2rem;
+	line-height: 2.7rem;
 }
 
 li { 
@@ -41,6 +43,18 @@ li {
 	font-size: 2rem;
 	text-align: center;
 } 
+
+.projects{
+	text-align: center;
+}
+
+.projects li{
+	display: block;
+	line-height: 4rem;
+}
+.projects a{
+	text-decoration: underline;
+}
 
 #last {
 	border: none !important;
@@ -56,9 +70,20 @@ li {
   	margin-right: auto;
 }
 
-/*#homepage {
-	font-size: 1.6rem;
-}*/
+.post {
+	text-align: left;
+	margin: 16rem;
+	margin-top: 1rem;
+}
+
+.header {
+	margin: 0;
+	padding: 0;
+}
+
+#homepage {
+	padding: 0 15rem 0 15rem;
+}
 
 p a {
 	text-decoration: underline;
