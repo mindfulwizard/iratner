@@ -1,6 +1,8 @@
 var app = angular.module('iratner', ['ngRoute']);
 
-app.config(function($routeProvider) {
+app.config(function($routeProvider, $locationProvider) {
+    $locationProvider.html5Mode(true);
+
 	$routeProvider
         .when('/', {
             templateUrl: 'pages/home.html',
@@ -41,5 +43,5 @@ app.controller('MainCtrl', function ($scope, $location) {
     $scope.isSet = function(tabNum){
       return $scope.tab === tabNum;
 	};
-
 });
+
