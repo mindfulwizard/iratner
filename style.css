@@ -85,6 +85,17 @@ li {
 	padding: 0 15rem 0 15rem;
 }
 
-p a {
+p a{
 	text-decoration: underline;
+}
+
+.slim * {
+	margin-top:0;
+	margin-bottom:0;
+	padding-top:0;
+	padding-bottom:0;
+}
+
+.footer {
+	font-size: 1.2rem;
 }

@@ -1,0 +1,20 @@
+<div ng-controller="ChartCtrl" class="slim">
+	<p>Enter amount of taxes you paid:  $<input ng-model="amount" size="10rem" ng-change="calc(amount)"></p>
+	<p>Select a year: 
+	<select class="adjacent" ng-model="year" ng-change="calc(amount)">
+		<option value="2010">2010</option>
+		<option value="2011">2011</option>
+		<option value="2012">2012</option>
+		<option value="2013">2013</option>
+		<option value="2014">2014</option>
+		<option value="2015">2015</option>
+	</select>
+	</p>
+	<div>
+		<div id="chart-container"></div>
+	</div>
+	<div ng-show="rendered">
+		<p>This is how the federal government spent your {{year}} tax dollars.</p>
+		<p class="footer"><a href="https://www.whitehouse.gov/omb/budget/Historicals">Source</a>: Office of Management and Budget</p>
+	</div>
+</div>
