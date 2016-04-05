@@ -163,25 +163,10 @@ app.controller('ChartCtrl', function ($scope) {
     }
 });
 
-var counter;
-
 app.controller('DeductoramaCtrl', function ($scope) {
-    $scope.submissions = 12;
-    $scope.rows = [0,1,2,3];
-    $scope.guesses = [];
-    $scope.answersArray = [null, null, null, null];
-    $scope.colorsArray = [null, null, null, null];
-    $scope.pegsArray = [];
-    $scope.currentPegs = [];
-    $scope.loser = false;
-    $scope.winner = false;
-    $scope.canClick = true;
 
-    $scope.colorCycler = function($index, array) {
-        if(!$scope.canClick) {
-            return;
-        };
-
+    var counter;
+    var colorCycler = function($index, array) {
         var availableColors = ['red', 'orange', 'yellow', 'green', 'blue', 'purple'];
         //start colorCycler from red if clicking on new circle
         if(!array[$index]) {
@@ -197,34 +182,17 @@ app.controller('DeductoramaCtrl', function ($scope) {
         //push colors into colorsArray to be rendered in working column
         array[$index] = availableColors[counter];
         counter++;
-    };
+    }
 
-    $scope.verify = function(array) {
+    var verify = function(array) {
         //make sure all circles are colored
         if(_.includes(array, null)) {
             $scope.notAllFilledOut = true;
             return;
         }
+    }
 
-        $scope.notAllFilledOut = false;
-        $scope.submissions--;
-        $scope.evalGuess(array);
-    };
-
-    $scope.evalGuess = function(array) {
-        //compare colorsObj to answersObj
-        if(_.isEqual(array, $scope.answersArray)) {
-            $scope.winner = true;
-            $scope.canClick = false;
-            return;
-        }
-
-        if(!$scope.submissions) {
-            $scope.loser = true;
-            $scope.canClick = false;
-            return;
-        }
-
+    var evaluate = function(array) {
         var rightSpot = 0;
         var rightColor = 0;
         var tempColors = _.clone($scope.colorsArray);
@@ -252,39 +220,20 @@ app.controller('DeductoramaCtrl', function ($scope) {
                 }
             }
         })
-
-        sendHints(rightColor, rightSpot);
-
-        //push colorsArray into guesses to be rendered by previous columns
-        $scope.guesses.push(array);
-        $scope.pegsArray.push($scope.currentPegs);
-
-        //reset arrays to be used in working column
-        $scope.colorsArray = [null, null, null, null];
-        $scope.currentPegs = [];
-    };
+    }
 
     function sendHints(rightColor, rightSpot) {
         //push correct amount of black/gray/white pegs to pegsArray to be rendered
         for(var a = 0; a < rightColor; a++) {
             $scope.currentPegs.push('gray');
+            console.log('gray');
         };
 
         for(var b = 0; b < rightSpot; b++) {
             $scope.currentPegs.push('black');
+            console.log('black');
         };
     };
-
-    $scope.revealAnswer = function() {
-        $scope.notAllFilledOut = false;
-        $scope.colorsArray = _.clone($scope.answersArray);
-        $scope.canClick = false;
-        $scope.loser = true;
-    };
-
-    $scope.playAgain = function() {
-        window.location.reload();
-    }
 
     $scope.setPattern = function(){
         //set answer by calling colorCycler randNum times on each circle
@@ -294,7 +243,11 @@ app.controller('DeductoramaCtrl', function ($scope) {
                 $scope.colorCycler(e, $scope.answersArray);
             }
         });
-        //console.log('answer:', $scope.answersArray);
+        console.log('If you know enough to look here, you earned the answer:', $scope.answersArray);
     }();
-
 });
+
+
+
+
+
