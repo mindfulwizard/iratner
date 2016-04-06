@@ -165,7 +165,6 @@ app.controller('ChartCtrl', function ($scope) {
 
 app.controller('DeductoramaCtrl', function ($scope, $route) {
 
-
     var evaluate = function(guesses, answers) {
         var rightSpot = 0;
         var rightColor = 0;
@@ -257,13 +256,21 @@ app.controller('DeductoramaCtrl', function ($scope, $route) {
             $scope.notAllFilledOut = true;
             return;
         } 
-        //if win
+        //check if win
         if(_.isEqual(guess, $scope.answersArray)) {
             $scope.winner = true;
             $scope.colorCycler = null;
             return;
         }
-        //otherwise, return hints and prep for next guess
+        //check if lose
+        if(!$scope.submissions) {
+            $scope.loser = true;
+            $scope.colorCycler = null;
+            $scope.submissions--;
+            return;
+        }
+
+        //return hints
         var results = evaluate(guess, $scope.answersArray);
         sendHints(results[0], results[1]);
         
@@ -274,6 +281,7 @@ app.controller('DeductoramaCtrl', function ($scope, $route) {
         //reset arrays to be used in working column
         $scope.colorsArray = _.fill(Array(4), null);
         $scope.currentPegs = [];
+        $scope.submissions--;
     }
 
     $scope.revealAnswer = function() {
@@ -285,7 +293,6 @@ app.controller('DeductoramaCtrl', function ($scope, $route) {
     $scope.playAgain = function() {
         $route.reload();
     }
-
 });
 
 
