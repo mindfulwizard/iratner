@@ -211,7 +211,7 @@ app.controller('DeductoramaCtrl', function ($scope, $route) {
     $scope.answersArray = _.fill(Array(4), null);
     $scope.colorsArray = _.fill(Array(4), null);
     $scope.rows = [0,1,2,3];
-    $scope.submissions = 2;
+    $scope.submissions = 12;
     var counter;
 
     $scope.colorCycler = function($index, array) {
@@ -255,7 +255,8 @@ app.controller('DeductoramaCtrl', function ($scope, $route) {
         if(!verify(guess)) {
             $scope.notAllFilledOut = true;
             return;
-        } 
+        }
+        $scope.notAllFilledOut = false;
         //check if win
         if(_.isEqual(guess, $scope.answersArray)) {
             $scope.winner = true;

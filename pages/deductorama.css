@@ -1,156 +1,59 @@
-
-h1, h2, p, div, footer {
-	padding: 0;
-	border: 0;
-	margin: 0;
-	font-size: 100%;
-	/*font-family: "Helvetica Neue", Helvetica, sans-serif;*/
+.instructions {
+	text-align: center;
+	margin: 0 6rem 0 6rem;
+	padding: 0 2rem 0 2rem;
 }
-h1 {
-	font-size: 30px;
+
+.buttons {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 2rem;
+}
+
+#submit:hover, #reveal:hover, #replay:hover{
+	cursor: pointer;
+	font-size: 2rem;
 	font-weight: bold;
-	text-align: center;
 }
 
-h4 {
-	font-size: 15px;
-	font-weight: normal;
-	text-align: center;
-}
-
-.header {
-	padding: 10px 60px 10px 60px;
-	border: 0px 60px 10px 60px;
-	margin: 0px 60px 10px 60px;
+#submit, #reveal, #replay {
+	text-decoration: underline;
+	padding: 0 3rem 0 3rem;
 }
 
 .board {
-	padding: 10px 60px 10px 60px;
-	border: 10px 60px 10px 60px;
-	margin: 10px 60px 10px 60px;
+	padding: 0 5rem 0 5rem;
+	margin: 0 5rem 0 5rem;
 }
 
 .column {
-	width: 70px;
-	height: 300px;
+	width: 7rem;
+	height: 30rem;
 	padding: 0;
 	margin: 0;
 	border: 0;
-	display: inline-block; 
-
-}
-
-
-.footer {
-	font-size: 15px;
-	font-weight: normal;
-	text-align: center;
-}
-
-.rectangle {
-	border-radius: 25px;
-	width: 1000px;
-	height: 400px;
-	margin-top: -1px;
-	margin-left: auto;
-    margin-right: auto;
-    /*border: 2px solid black;*/
-    padding: 10px 10px 20px 10px;
-}
-
-#upper {
-	height: 50px;
-	width:  1000px
-	border: 2px solid black;
-}
-
-.words {
-	margin: auto;
-	height: 60px; 
-	width: 200px;
-}
-
-.clues {
-	height: 40px; 
-	width: 65px;
 	display: inline-block;
-	/*border: 1px dashed black;*/
 }
 
 .circle {
-	width: 50px;
-    height: 50px;
-    border-radius: 25px;
-    -webkit-border-radius: 25px;
-    -moz-border-radius: 25px; 
+	width: 5rem;
+    height: 5rem;
+    border-radius: 2.5rem;
     display: block;
-    border: 2px solid black;
-    margin: 5px 5px 5px 5px;
-    cursor: pointer;
+    border: .2rem solid black;
+    margin: .5rem .5rem .5rem .5rem;
 }
 
-.circle:hover {
-	/*border: 4px solid black;*/
+#workingColumn .circle:hover {
+	border-radius: .5rem;
+	cursor: pointer;
 }
 
 .peg {
-	width: 10px;
-    height: 10px;
-    border-radius: 13px;
-    -webkit-border-radius: 13px;
-    -moz-border-radius: 13px; 
+	width: 1rem;
+    height: 1rem;
+    border-radius: 1.3rem;
     display: inline-block;
-    border: 2px solid black;
-    margin: 3px 3px 3px 10px;
-}
-
-.pegs {
-	display: block;
-}
-
-.button-div {
-	text-align:center;
-	display: block;
-	width: 200px;
-    height: 200px;
-	display: block
-	padding-left: 60 px;
-	padding-right: 60 px;
-	border-left: 60 px;
-	border-right: 60 px;
-	margin-left: 60 px;
-	margin-right: 60 px;
-	margin: 0 auto;
-    width: 100px; 
-	}
-
-.but {
-	text-align: center;
-	float: left;
-	margin: 10px 10px 10px 10px;
-	padding: 10px 10px 10px 10px;
-}
-
-.red {
-	background-color: red;
-}
-
-.orange {
-	background-color: orange;
-}
-
-.yellow {
-	background-color: yellow;
-}
-
-.green {
-	background-color: green;
-}
-
-.blue {
-	background-color: blue;
-}
-
-.purple {
-	background-color: purple;
+    border: .2rem solid black;
+    margin: .3rem .3rem .3rem 1rem;
 }

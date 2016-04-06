@@ -1,5 +1,6 @@
 <div ng-controller="ChartCtrl" class="slim">
-	<p>Enter amount of taxes you paid:  $<input ng-model="amount" size="10rem" ng-change="calc(amount)"></p>
+	<h2>TaxPie</h2>
+	<p class="topline">Enter amount of taxes you paid:  $<input ng-model="amount" size="10rem" ng-change="calc(amount)"></p>
 	<p>Select a year: 
 	<select class="adjacent" ng-model="year" ng-change="calc(amount)">
 		<option value="2010">2010</option>
