@@ -261,6 +261,7 @@ app.controller('DeductoramaCtrl', function ($scope, $route) {
         if(_.isEqual(guess, $scope.answersArray)) {
             $scope.winner = true;
             $scope.colorCycler = null;
+            $scope.won = 'black';
             return;
         }
         //check if lose
@@ -287,6 +288,7 @@ app.controller('DeductoramaCtrl', function ($scope, $route) {
 
     $scope.revealAnswer = function() {
         $scope.loser = true;
+        $scope.peeked = true;
         $scope.colorsArray = _.clone($scope.answersArray);
         $scope.colorCycler = null;
     };

@@ -21,7 +21,7 @@
 			</div>
 			<div class='column'id="workingColumn">
 				<div class="pegs">
-					<div class="peg" id='peg{{$index+1}}' ng-repeat='row in rows track by $index'></div>
+					<div class="peg" id='peg{{$index+1}}' ng-repeat='row in rows track by $index' style='background-color: {{won}}'></div>
 				</div>
 				<div class='circles'>
 					<div class='circle' id="circle{{$index+1}}" ng-click="colorCycler($index, colorsArray)" ng-repeat='row in rows track by $index' style='background-color: {{colorsArray[$index]}}'></div>
@@ -30,7 +30,7 @@
 		</div>
 		<div class="buttons">
 			<span ng-hide="winner || loser" id="submit" ng-click="submit(colorsArray)">Submit Guess!</span>
-			<span id="reveal" ng-hide="winner" ng-click="revealAnswer()">Reveal Solution!</span>
+			<span id="reveal" ng-hide="winner || peeked" ng-click="revealAnswer()">Reveal Solution!</span>
 			<span id="replay" ng-click="playAgain()">Play Again!<span>
 		</div>	
 </div>			
