@@ -1,0 +1,39 @@
+{
+  "name": "iratner",
+  "version": "1.0.0",
+  "description": "personal site",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon --watch server start.js",
+    "postinstall": "gulp build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mindfulwizard/iratner.git"
+  },
+  "author": "Isaac Ratner",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mindfulwizard/iratner/issues"
+  },
+  "homepage": "iratner.com",
+  "engines": {
+    "node": "5.4.1"
+  },
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "express": "^4.13.4",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-run": "^1.6.12",
+    "gulp-sass": "^2.2.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "lodash": "^4.8.2",
+    "morgan": "^1.7.0",
+    "nodemon": "^1.9.1",
+    "run-sequence": "^1.1.5",
+    "serve-favicon": "^2.3.0"
+  }
+}
