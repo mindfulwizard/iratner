@@ -2,10 +2,8 @@
   "name": "iratner",
   "version": "1.0.0",
   "description": "personal site",
-  "main": "app.js",
   "scripts": {
-    "start": "nodemon --watch server start.js",
-    "postinstall": "gulp build"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -30,6 +28,7 @@
     "gulp-run": "^1.6.12",
     "gulp-sass": "^2.2.0",
     "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^1.5.3",
     "lodash": "^4.8.2",
     "morgan": "^1.7.0",
     "nodemon": "^1.9.1",
