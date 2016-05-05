@@ -5,6 +5,7 @@ var concat = require('gulp-concat');
 var runSeq = require('run-sequence');
 var rename = require('gulp-rename');
 var uglify = require('gulp-uglify');
+var ngAnnotate = require('gulp-ng-annotate');
 //var sass = require('gulp-sass');
 // var mocha = require('gulp-mocha');
 // var babel = require('gulp-babel');
@@ -31,11 +32,12 @@ gulp.task('build', function() {
 });
 
 gulp.task('buildJS', function() {
-    return gulp.src(['./pre-build/app.js', './pre-build/**/*.js'])
+    return gulp.src(['./pre-build/angular.min.js', './pre-build/app.js', './pre-build/**/*.js'])
         .pipe(plumber())
         .pipe(sourcemaps.init())
         .pipe(concat('app.js'))
-        //.pipe(uglify())
+        .pipe(ngAnnotate())
+        .pipe(uglify())
         .pipe(sourcemaps.write())
         .pipe(gulp.dest('./public'));
 });
