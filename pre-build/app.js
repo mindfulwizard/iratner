@@ -5,8 +5,7 @@ app.config(function($routeProvider, $locationProvider) {
 
     $routeProvider
         .when('/', {
-            templateUrl: 'pages/home.html',
-            controller: 'MainCtrl'
+            templateUrl: 'pages/home.html'
         })
         .when('/about', {
             templateUrl: 'pages/about.html'
@@ -24,6 +23,6 @@ app.config(function($routeProvider, $locationProvider) {
             templateUrl: 'pages/deductorama.html'
         })
         .otherwise({
-            templateUrl: 'pages/home.html'
+            redirectTo: '/'
         });
 });

@@ -1,6 +1,6 @@
 app.controller('MainCtrl', function ($scope, $location) {
     if($location.$$url === '/' || !$location.$$url) {
-        $scope.tab = 1
+        $scope.tab = 1;
     }
     if($location.$$url === '/about') {
         $scope.tab = 2;
@@ -19,4 +19,5 @@ app.controller('MainCtrl', function ($scope, $location) {
     $scope.isSet = function(tabNum) {
       return $scope.tab === tabNum;
     };
+
 });
