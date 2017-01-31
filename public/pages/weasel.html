@@ -1,0 +1,21 @@
+<div ng-controller="WeaselCtrl" class="slim weasel">
+	<h2>Dawkins' Weasel</h2>
+	<p>This is my Javascript implemention of the algorithmic process driving evolutionary systems.</p>
+	<br>
+	<p>After you choose a target word or phrase, a random string is generated. One hundred copies of this string are made, with small random variations between them. These copies are compared to one another, and the one most similar to the target is selected. One hundred copies of THAT particular string are made, again with with small random variations between them. The cycle repeats until the target phrase is matched.</p>
+	<br>
+	<p>In this way, over the course of a non-determined number of generations, random variation combined with non-random cumulative selection 'guides' this string to 'evolve' into the target phrase.
+	<a href="https://en.wikipedia.org/wiki/Weasel_program" target="_blank">
+	<span>(In-depth explanation,</span></a>
+	<a href="https://github.com/mindfulwizard/iratner/blob/master/pre-build/weaselCtrl.js" target="_blank">
+	<span>code)</span></a>
+	</p>
+	<br>
+	<p class="topline">Enter a word or phrase:  <input ng-model="phrase"></p>
+	<button ng-click="weasel(phrase)">Run</button>
+	<p ng-show="results.length">Best Mutation In Each Generation: </p>
+	<div class="gens">
+		<p ng-repeat="result in results track by $index">{{result}}</p>
+	</div>
+	<p>{{final}}</p>
+</div>

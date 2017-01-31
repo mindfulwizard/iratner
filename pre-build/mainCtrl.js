@@ -8,7 +8,7 @@ app.controller('MainCtrl', function ($scope, $location) {
     if($location.$$url === '/articles') {
         $scope.tab = 3;
     }
-    if($location.$$url === '/projects' || $location.$$url === '/taxpie' || $location.$$url === '/deductorama') {
+    if($location.$$url === '/projects' || $location.$$url === '/taxpie' || $location.$$url === '/deductorama' || $location.$$url === '/weasel') {
         $scope.tab = 4;
     }
 

@@ -22,6 +22,9 @@ app.config(function($routeProvider, $locationProvider) {
         .when('/deductorama', {
             templateUrl: 'pages/deductorama.html'
         })
+        .when('/weasel', {
+            templateUrl: 'pages/weasel.html'
+        })        
         .otherwise({
             redirectTo: '/'
         });
